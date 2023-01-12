@@ -1,0 +1,24 @@
+2주차 과제
+1. Max-Heap 알고리즘을 구현해주세요
+2. 다익스트라 알고리즘을 구현해주세요.
+   시작노드에서 최적경로를 출력해주세요. 그리고 해당 경로가 최적이 맞는지  
+   다익스트라 알고리즘은 음의 가중치가 있는 경우에도 적용되는지 확인해주세요
+3. 벨만포드 알고리즘을 구현해주시고, pdf에 나온 예제를 인풋으로 넣어 점검해주세요
+4. 그리디 알고리즘에 대해서 조사해주시고, 하나의 예를 필수로 들어 설명해주세요
+5. 1000 x 1000배열을 만들고 아래와 같은 미로찾기 게임을 구현해주세요
+   그리고 미로를 찾는 알고리즘을 DFS/BFS/다익스트라로 구현하고 속도를 비교해주세요 왜 이런 속도 차이가 나는지도 정리해주세요
+   => 아래는 입력의 예입니다. S에서 E로 가는것입니다. O가 길이고 X는 장애물입니다.
+ 
+SXXXXX
+OXXXXX
+OOOOOE
+
+
+[실전문제풀이]
+https://programmers.co.kr/learn/courses/30/lessons/43162
+https://programmers.co.kr/learn/courses/30/lessons/43163
+https://programmers.co.kr/learn/courses/30/lessons/43164
+https://programmers.co.kr/learn/courses/30/lessons/43165
+https://programmers.co.kr/learn/courses/30/lessons/49191
+https://programmers.co.kr/learn/courses/30/lessons/49189
+https://programmers.co.kr/learn/courses/30/lessons/42627
