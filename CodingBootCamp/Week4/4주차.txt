@@ -1,0 +1,16 @@
+
+1. Memoization과 recursive를 성능,가독성 면에서 비교 분석해주세요
+   그리고 피보나치 수를 구하는 함수를 DP와 recurve를 이용해서 각각 구현하고 아래를 테스트 해주세요
+   => f(1),  f(100) f(10000)
+     * 특이사항이 있다면 원인을 분석해주세요
+
+2. Bottom-Up 방식과 Top-Down방식이 무엇인지 정리해주시고, 이둘의 장단점을 비교해주세요 DP는 이 중 어느부분에 해당되는지도 언급해주세요
+3. 설명자료의 LCS알고리즘은 구현해주세요
+4. Edit Distance를 구현하고 테스트 해주세요
+
+
+[실전문제풀이]
+https://programmers.co.kr/learn/courses/30/lessons/42895
+https://programmers.co.kr/learn/courses/30/lessons/43105
+https://programmers.co.kr/learn/courses/30/lessons/42898
+https://programmers.co.kr/learn/courses/30/lessons/42897
