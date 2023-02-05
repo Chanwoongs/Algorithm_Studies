@@ -1,0 +1,8 @@
+﻿  SortTimeComparison.cpp
+C:\Users\Chanwoongs\Desktop\Project\CodingTest\CodingBootCamp\Week1\Week1\SortTimeComparison.cpp(77,20): warning C4018: '<': signed/unsigned mismatch
+  Generating code
+  8 of 112 functions ( 7.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Week1.vcxproj -> C:\Users\Chanwoongs\Desktop\Project\CodingTest\CodingBootCamp\Week1\Week1\Release\Week1.exe

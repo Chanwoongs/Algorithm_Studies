@@ -1,0 +1,14 @@
+1. Dictionary Problem을 해결해봅시다.
+  => Direct Access Table의 문제점은 무엇일까요?
+  => Hashing으로 해당 문제를 해결하려면 문자열을 정수로 변환하는 작업이 필요합니다.
+  => 적절한 hashing함수를 검색하고 이를 적용해주세요
+2. Karp-Rabin알고리즘을 구현하고 충분히 시험한 후 결과까지 공유해주세요
+3. Open-Address와 Chaning의 방법을 각각 설명하고 장단점을 들어 비교해주세요
+4. Uniform Hashing에 대해 정리해주시고 이때 Multiplication Method를 필수적으로 언급해주세요
+
+
+[실전문제풀이]
+https://programmers.co.kr/learn/courses/30/lessons/42576
+https://programmers.co.kr/learn/courses/30/lessons/42577
+https://programmers.co.kr/learn/courses/30/lessons/42578
+https://programmers.co.kr/learn/courses/30/lessons/42579
