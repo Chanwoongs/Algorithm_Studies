@@ -4,10 +4,12 @@
 using namespace std;
 
 int LCS[100][100] = { 0, };
+int result[100] = { 0 };
 
 int main()
 {
 	string str1, str2;
+	int idx = 0;
 
 	cin >> str1 >> str2;
 
@@ -18,6 +20,8 @@ int main()
 			if (str1[i] == str2[j])
 			{
 				LCS[i][j] = 1 + LCS[i - 1][j - 1];
+				result[idx] = LCS[i][j];
+				idx++;
 			}
 			else
 			{
@@ -26,6 +30,10 @@ int main()
 		}
 	}
 
-	cout << "Result : " << LCS[str1.length() - 1][str2.length() - 1];
+	for (int i = 0; i < idx; i++)
+	{
+		cout << result[i];
+	}
 
+	cout << "Result : " << LCS[str1.length() - 1][str2.length() - 1];
 }
