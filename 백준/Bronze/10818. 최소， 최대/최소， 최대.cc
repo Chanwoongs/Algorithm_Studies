@@ -6,16 +6,18 @@ using namespace std;
 int main()
 {
     int n;
-    int nums[1000001] = {0,};
-    
+    int num;
     cin >> n;
+    
+    int max = -1000000;
+    int min = 1000000;
     
     for(int i = 0; i < n; i++)
     {
-        cin >> nums[i];
+        cin >> num;
+        if (max < num) max = num;
+        if (min > num) min = num;
     }
     
-    sort(nums, nums + n);
-    
-    cout << nums[0] << ' ' << nums[n - 1];
+    cout << min << ' ' << max;
 }
