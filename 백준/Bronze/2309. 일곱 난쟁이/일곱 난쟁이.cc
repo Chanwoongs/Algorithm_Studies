@@ -1,15 +1,13 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-//#include <pair>
+#include <utility>
 using namespace std;
 
 int a[100004];
 int all;
-int fake1;
-int fake2;
 vector<int> v;
-//pair<int, int> fake;
+pair<int, int> fake;
 
 void findFake()
 {
@@ -19,8 +17,7 @@ void findFake()
         {
             if (all - a[i] - a[j] == 100)
             {
-                fake1 = a[i];
-                fake2 = a[j];
+                fake = {i, j};
                 return;
             }
         }
@@ -38,7 +35,7 @@ int main()
     findFake();
     for (int i = 0; i < 9; i++)
     {
-        if (a[i] == fake1 || a[i] == fake2) continue;
+        if (i == fake.first || i == fake.second) continue;
         v.push_back(a[i]);
     }
     
