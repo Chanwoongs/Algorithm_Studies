@@ -18,8 +18,7 @@ int main()
             }
             else
             {
-                cnt = (cnt * 10 + 1);
-                cnt = cnt % n;
+                cnt = (cnt * 10 + 1) % n;
                 ret++;            
             }
         }
