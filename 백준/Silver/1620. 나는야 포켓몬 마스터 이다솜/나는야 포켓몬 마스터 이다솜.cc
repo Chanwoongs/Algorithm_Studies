@@ -20,8 +20,8 @@ int main()
     for (int i = 1; i <= cnt; i++)
     {
         cin >> temp;
-        dic[temp] = i;
-        //dic.insert(pair<string, int>(temp, i));
+        //dic[temp] = i;
+        dic.insert(pair<string, int>(temp, i));
         names[i] = temp;
     }
     
@@ -32,8 +32,8 @@ int main()
         int num = atoi(temp.c_str());
         
         if (num == 0)
-            cout << dic[temp] << '\n';
-            //cout << dic.find(temp)->second << '\n';
+            //cout << dic[temp] << '\n';
+            cout << dic.find(temp)->second << '\n';
         else
             cout << names[num] << '\n';
     }
