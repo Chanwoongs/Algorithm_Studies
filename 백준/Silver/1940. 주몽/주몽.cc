@@ -1,28 +1,30 @@
 #include <iostream>
+#include <map>
 
 using namespace std;
 
 int cnt;
 int trg;
-int mat[15004];
+map<int, int> mat;  
 int res;
+int num;
 
 int main()
 {
     cin >> cnt >> trg;
 
-    for (int i = 0; i < cnt; i++)
+    for (int i = 1; i <= cnt; i++)
     {
-        cin >> mat[i]; 
+        int temp;
+        cin >> temp; 
+        mat[temp]++;
     }
-    
-    for (int i = 0; i < cnt; i++)
-    {
-        for (int j = i + 1; j < cnt; j++)
-        {
-            if (mat[i] + mat[j] == trg) res++;
-        }
-    }
-    
-    cout << res << '\n';
+	for(auto it : mat)
+    { 
+		if(trg - it.first > 0 && mat[trg - it.first] > 0)
+        { 
+			res += min(mat[it.first], mat[trg - it.first]);
+		} 
+	}  
+    cout << res / 2 << '\n';
 }
