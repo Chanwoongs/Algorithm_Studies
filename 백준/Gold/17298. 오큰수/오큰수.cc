@@ -8,6 +8,10 @@ stack<int> s;
 
 int main()
 {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+   
 	cin >> n;
 
 	fill(&res[0], &res[0] + 1000004, -1);
