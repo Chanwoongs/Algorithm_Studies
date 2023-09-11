@@ -1,16 +1,29 @@
-#include <bits/stdc++.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+#include <iostream>
+
 using namespace std;
-int n, m, x;
+
 char s[11];
-int main() {
-    scanf(" %d", &m);
-    for (int i = 0; i < m; i++) {
-        scanf(" %s %d", &s, &x); 
-        if (s[0]=='a' && s[1]=='d') n |= (1 << x);
-        else if (s[0] == 'r') n &= ~(1 << x);
-        else if (s[0] == 'c') printf("%d\n", (n&(1 << x)) ==0? 0: 1);
-        else if (s[0] == 't') n ^=(1<<x);
-        else if (s[0] == 'a' && s[1] == 'l') n = (1 << 21) - 1;
-        else n = 0;
-    }
+int m, x, num;
+
+int main()
+{
+	scanf(" %d", &m);
+
+	for (int i = 0; i < m; i++)
+	{
+		scanf(" %s %d", &s, &x);
+
+		if (s[0] == 'a' && s[1] == 'd') num |= (1 << x);
+		else if (s[0] == 'r') num &= ~(1 << x);
+		else if (s[0] == 'c')
+		{
+			if (num & (1 << x)) cout << '1' << '\n';
+			else cout << '0' << '\n';
+		}
+		else if (s[0] == 't') num ^= (1 << x);
+		else if (s[0] == 'a' && s[1] == 'l') num = (1 << 21) - 1;
+		else num = 0;
+	}
 }
