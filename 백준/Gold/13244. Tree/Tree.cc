@@ -29,8 +29,8 @@ int main()
 		for (int i = 0; i < m; i++)
 		{
 			scanf("%d %d", &a, &b); // 양방향 간선 저장
-			adj[b].push_back(a);
 			adj[a].push_back(b);
+			adj[b].push_back(a);
 		}
 		for (int i = 1; i <= n; i++)
 		{
