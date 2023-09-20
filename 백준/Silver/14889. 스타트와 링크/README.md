@@ -1,10 +1,10 @@
-# [Silver II] 스타트와 링크 - 14889 
+# [Silver I] 스타트와 링크 - 14889 
 
 [문제 링크](https://www.acmicpc.net/problem/14889) 
 
 ### 성능 요약
 
-메모리: 2024 KB, 시간: 132 ms
+메모리: 2024 KB, 시간: 128 ms
 
 ### 분류
 

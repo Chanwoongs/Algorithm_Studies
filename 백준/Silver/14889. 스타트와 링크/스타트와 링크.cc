@@ -1,33 +1,50 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+
 using namespace std;
-const int INF = 987654321;
-int s[24][24], ret = INF, n; 
-int go(vector<int>& a, vector<int> & b){
-	pair<int, int> ret;  
-	for(int i = 0; i < n / 2; i++){
-		for(int j = 0; j < n / 2; j++){
-			if(i == j)continue;
-			ret.first += s[a[i]][a[j]];
-			ret.second += s[b[i]][b[j]]; 
+
+int n, res = 987654321;
+int s[24][24];
+
+int go(vector<int> start, vector<int> link)
+{
+	pair<int, int> res;
+	for (int i = 0; i < n / 2; i++)
+	{
+		for (int j = 0; j < n / 2; j++)
+		{
+			if (i == j) continue; // (i, i)이면 0 이기 때문에
+
+			res.first += s[start[i]][start[j]];
+			res.second += s[link[i]][link[j]];
 		}
 	}
-	return abs(ret.first - ret.second);
+	return abs(res.first - res.second);
 }
-int main() { 
-    cin >> n;
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            cin >> s[i][j];
-        }
-    } 
-    for (int i = 0; i < (1 << n); i++) {
-		if(__builtin_popcount(i) != n / 2) continue; 
-        vector<int> start, link;
-		for(int j = 0; j < n; j++){
-			if(i & (1 << j))start.push_back(j);
+
+int main()
+{
+	cin >> n;
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			cin >> s[i][j];
+		}
+	}
+
+	for (int i = 0; i < (1 << n); i++)
+	{
+		// 0, 1 이 정확히 반으로 쪼개져 있냐
+		if (__builtin_popcount(i) != n / 2) continue; 
+		
+		vector<int> start, link;
+		for (int j = 0; j < n; j++)
+		{
+			if (i & (1 << j)) start.push_back(j);
 			else link.push_back(j);
 		}
-		ret = min(ret, go(start, link)); 
-    }
-    cout << ret << '\n';
-} 
+		res = std::min(res, go(start, link));
+	}
+	cout << res << '\n';
+}
