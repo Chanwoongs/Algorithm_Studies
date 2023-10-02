@@ -1,2 +1,16 @@
-﻿  BFS_EXProb.cpp
-  Debuging.vcxproj -> C:\Users\Chanwoongs\Desktop\Project\CodingTest\SelfSoving\Debuging\Debug\Debuging.exe
+﻿  Source1.cpp
+C:\Users\Chanwoongs\Desktop\Project\CodingTest\SelfSoving\Debuging\Debuging\Source1.cpp(15,20): error C2039: 'size': is not a member of 'std::_Tree_iterator<std::_Tree_val<std::_Tree_simple_types<std::pair<const std::string,std::vector<std::string,std::allocator<std::string>>>>>>'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(866): message : see declaration of 'std::_Tree_iterator<std::_Tree_val<std::_Tree_simple_types<std::pair<const std::string,std::vector<std::string,std::allocator<std::string>>>>>>'
+C:\Users\Chanwoongs\Desktop\Project\CodingTest\SelfSoving\Debuging\Debuging\Source1.cpp(17,26): error C2039: 'second': is not a member of 'std::_Tree_iterator<std::_Tree_val<std::_Tree_simple_types<std::pair<const std::string,std::vector<std::string,std::allocator<std::string>>>>>>'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xtree(866): message : see declaration of 'std::_Tree_iterator<std::_Tree_val<std::_Tree_simple_types<std::pair<const std::string,std::vector<std::string,std::allocator<std::string>>>>>>'
+C:\Users\Chanwoongs\Desktop\Project\CodingTest\SelfSoving\Debuging\Debuging\Source1.cpp(18,12): error C3536: 'it': cannot be used before it is initialized
+C:\Users\Chanwoongs\Desktop\Project\CodingTest\SelfSoving\Debuging\Debuging\Source1.cpp(18,5): error C2672: 'std::sort': no matching overloaded function found
+C:\Users\Chanwoongs\Desktop\Project\CodingTest\SelfSoving\Debuging\Debuging\Source1.cpp(18,30): error C2780: 'void std::sort(const _RanIt,const _RanIt)': expects 2 arguments - 1 provided
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\algorithm(7084): message : see declaration of 'std::sort'
+C:\Users\Chanwoongs\Desktop\Project\CodingTest\SelfSoving\Debuging\Debuging\Source1.cpp(18,30): error C2780: 'void std::sort(const _RanIt,const _RanIt,_Pr)': expects 3 arguments - 1 provided
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\algorithm(7076): message : see declaration of 'std::sort'
+C:\Users\Chanwoongs\Desktop\Project\CodingTest\SelfSoving\Debuging\Debuging\Source1.cpp(20,23): error C2109: subscript requires array or pointer type
+C:\Users\Chanwoongs\Desktop\Project\CodingTest\SelfSoving\Debuging\Debuging\Source1.cpp(22,12): error C2660: 'go': function does not take 1 arguments
+C:\Users\Chanwoongs\Desktop\Project\CodingTest\SelfSoving\Debuging\Debuging\Source1.cpp(11,6): message : see declaration of 'go'
+C:\Users\Chanwoongs\Desktop\Project\CodingTest\SelfSoving\Debuging\Debuging\Source1.cpp(28,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Chanwoongs\Desktop\Project\CodingTest\SelfSoving\Debuging\Debuging\Source1.cpp(30,27): warning C4018: '<': signed/unsigned mismatch
