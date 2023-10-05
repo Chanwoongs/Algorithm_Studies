@@ -1,0 +1,19 @@
+#include <string>
+#include <vector>
+
+using namespace std;
+
+string solution(string myString) {
+    string answer = "";
+    
+    for (auto c : myString)
+    {
+        if (c >= 'a' && c <= 'z')
+        {
+            c -= 'a' - 'A';
+        }
+        answer += c;
+    }
+    
+    return answer;
+}
