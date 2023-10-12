@@ -1,66 +1,57 @@
-#include <iostream>
-#include <algorithm>
-#include <vector>
-#include <tuple>
-
+#include<iostream>
+#include<algorithm>
+#include<vector>
+#include<queue>
 using namespace std;
 
-int V, E, a, b, c;
+typedef pair<int, int> pair_ii;
+
+int V, E, A, B, C;
 int u, v, w;
-int parent[10004];
-long long res;
-bool check;
-vector<tuple<int, int, int>> graph;
-vector<tuple<int, int, int>> resGraph;
-
-int find(int x)
-{
-	if (parent[x] == x) return x;
-	return parent[x] = find(parent[x]);
-}
-
-void _union(int x, int y)
-{
-	int a = find(x);
-	int b = find(y);
-
-	check = false;
-
-	if (a == b) return;
-	if (a < b) parent[b] = find(a);
-	else parent[a] = b;
-	check = true;
-}
+long long ans;
+bool visit[10001];
+vector<pair_ii> graph[10001];
+priority_queue<pair_ii, vector<pair_ii>, greater<pair_ii>> pq; // 오름차순 우선순위 큐
 
 int main()
 {
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+
 	cin >> V >> E;
 
-	for (int i = 1; i <= V; i++)
-	{
-		parent[i] = i;
-	}
+	// 그래프 연결 정보 저장
 	for (int i = 0; i < E; i++)
 	{
-		cin >> a >> b >> c;
-		graph.push_back({ c, a, b });
+		cin >> A >> B >> C;
+		graph[A].push_back(make_pair(B, C));
+		graph[B].push_back(make_pair(A, C));
 	}
-	sort(graph.begin(), graph.end());
 
-	for (int i = 0; i < E; i++)
+	pq.push(make_pair(0, 1)); // (가중치, 노드)
+
+	while (!pq.empty())
 	{
-		_union(get<1>(graph[i]), get<2>(graph[i]));
+		int now_weight = pq.top().first;
+		int now_node = pq.top().second;
+		
+		pq.pop();
 
-		if (check)
+		// 이미 방문했으면 넘어감
+		if (visit[now_node]) continue;
+
+		visit[now_node] = true; // 방문 표시
+
+		ans += now_weight;
+
+		// 다음 정점들을 우선순위 큐에 삽입
+		for (int i = 0; i < graph[now_node].size(); i++)
 		{
-			resGraph.push_back({ get<1>(graph[i]), get<2>(graph[i]), get<0>(graph[i]) });
-			res += get<0>(graph[i]);
+			int next_node = graph[now_node][i].first;
+			int next_weight = graph[now_node][i].second;
+
+			pq.push(make_pair(next_weight, next_node));
 		}
 	}
-
-	//for (auto x : resGraph)
-	//{
-	//	cout << get<1>(x) << ' ' << get<2>(x) << '\n';
-	//}
-	cout << res << '\n';
+	cout << ans << '\n';
 }
