@@ -25,26 +25,26 @@ int main()
         return a.second < b.second;
         });
 
-    int totalWei = 0;
-    int totalPri = 0;
-    int prev = -1;
+    int total = 0;
+    int price = 0;
+    int ans = 2147483647;
+    bool flag = false;
 
     for (int i = 0; i < v.size(); i++)
     {
-        if (totalWei < m)
-        {
-            if (prev == v[i].second)
-                totalPri += v[i].second;
-            else
-                prev = totalPri = v[i].second;
-        }
+        total += v[i].first;
+
+        if (i != 0 && v[i - 1].second == v[i].second)
+            price += v[i].second;
         else
+            price = 0;
+
+        if (total >= m)
         {
-            if ((prev != v[i].second) && (totalPri >= v[i].second))
-                prev = totalPri = v[i].second;
+            ans = min(ans, price + v[i].second);
+            flag = true;
         }
-        totalWei += v[i].first;
     }
 
-    cout << (totalWei < m ? -1 : totalPri) << '\n';
+    cout << (flag ? ans : -1) << '\n';
 }
