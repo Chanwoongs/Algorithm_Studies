@@ -9,7 +9,7 @@ int main() {
     float b = 1.3;
 
     cout << fixed;
-    cout << precision(1);
+    cout.precision(1);
 
     cout << a << "ft = " << ft * a << "cm\n";
     cout << b << "mi = " << mi * b << "cm\n";
