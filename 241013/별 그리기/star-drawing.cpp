@@ -7,7 +7,7 @@ int main() {
 
     for (int i = 1; i <= n; i++)
     {
-        for (int j = 0; j < n - 1; j++)
+        for (int j = 0; j < n - i; j++)
         {
             cout << ' ';
         }
@@ -18,7 +18,9 @@ int main() {
         }
         cout << endl;
     }
-    for(int i = n - 1; i >= 1; i--) {
+    
+    for(int i = n - 1; i >= 1; i--) 
+    {
         for(int j = 0; j < n - i; j++) {
             cout << " ";
         }
