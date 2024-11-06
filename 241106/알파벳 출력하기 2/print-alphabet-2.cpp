@@ -12,11 +12,11 @@ int main() {
         {
             if (i > j)
             {
-                cout << " ";
+                cout << "  ";
             }
             else
             {
-                cout << (char)a++;
+                cout << (char)a++ << ' ';
             }
             if (a == (int)'Z' + 1) a = (int)'A';
         }
