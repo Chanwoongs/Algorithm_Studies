@@ -15,7 +15,7 @@ int main() {
             res *= i;
         }
 
-        cout << sum << '\n';
+        cout << res << '\n';
     }
 
     return 0;
