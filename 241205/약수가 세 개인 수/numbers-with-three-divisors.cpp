@@ -18,11 +18,12 @@ int main() {
         }
         if (cnt == 3)
         {
+            cout << j << ' ';
             res++;
         }
     }
 
     cout << res << '\n';
-    
+
     return 0;
 }
